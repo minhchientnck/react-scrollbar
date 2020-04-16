@@ -1,0 +1,81 @@
+$white: #fff;
+$track_bg: #f0f0f0;
+$thumb_bg: #c4c4c4;
+$container_bg: #fafafa;
+
+.scroll-bar-container {
+  position: relative;
+  margin-bottom: 12px;
+  width: 50%;
+  height: 100px;
+
+  .scroll-content {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    .content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  .vertical-scroll {
+    background-color: $white;
+    height: 100%;
+    width: 10px;
+    position: absolute;
+    top: 0;
+    right: -12px;
+    .track {
+      background-color: $track_bg;
+      height: 100%;
+      width: 10px;
+      border-radius: 10px;
+      z-index: 10;
+      .thumb {
+        width: 10px;
+        position: absolute;
+        cursor: pointer;
+        background-color: $thumb_bg;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .horizontal-scroll {
+    background-color: $white;
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 2px);
+    .track {
+      background-color: $track_bg;
+      width: 100%;
+      height: 10px;
+      border-radius: 10px;
+      z-index: 10;
+      .thumb {
+        height: 10px;
+        position: absolute;
+        cursor: pointer;
+        background-color: $thumb_bg;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .un-selected-element {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
