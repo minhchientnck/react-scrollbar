@@ -1,6 +1,6 @@
 {
-  "name": "react-scrollbar",
-  "version": "0.1.0",
+  "name": "adapter-react-scrollbar",
+  "version": "1.0.0",
   "private": false,
   "main": "dist/index.js",
   "dependencies": {
